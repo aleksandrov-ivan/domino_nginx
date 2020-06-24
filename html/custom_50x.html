@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Проводятся технические работы</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1 id="ms" style="text-align: center; padding-top: 10%; ">Проводятся технические работы, зайдите пожалуйста позже</h1>
+</body>
+<script>
+
+    var phrase = {
+        "en":"Technical work is underway, please check back later",
+        "ru":"Проводятся технические работы, зайдите пожалуйста позже",
+        "uk":"Проводяться технічні роботи, завітайте будь ласка пізніше"
+    }
+    var language = window.navigator ? (window.navigator.language ||
+                  window.navigator.systemLanguage ||
+                  window.navigator.userLanguage) : "en";
+        language = language.substr(0, 2).toLowerCase();
+
+    if (!phrase[language])
+        language = "en"
+
+    document.title=phrase[language]
+    document.getElementById("ms").innerText=phrase[language]
+    
+
+</script>
+
+</html>
